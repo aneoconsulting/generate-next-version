@@ -16,10 +16,8 @@
     "url": "git+https://github.com/aneoconsulting/generate-next-version.git"
   },
   "keywords": [
-    "github",
-    "release",
-    "changelog",
-    "notes"
+    "version",
+    "semver"
   ],
   "sideEffects": false,
   "exports": {
