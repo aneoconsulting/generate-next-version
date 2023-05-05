@@ -21,7 +21,7 @@ const defaultConfig: GenerateNextVersionConfig = {
   },
   language: 'javascript',
   edge: false,
-  from: '',
+  base: 'main',
 }
 
 export async function resolveConfig(options: GenerateNextVersionConfig) {
