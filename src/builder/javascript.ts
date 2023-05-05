@@ -1,13 +1,9 @@
-import { type SemverBumpType, getGitDiff, parseCommits } from 'changelogen'
+import type { GitCommit, SemverBumpType } from 'changelogen'
 import type { ResolvedGenerateNextVersionConfig } from '../types'
 import { inc, useSlugify } from './_utils'
 
-export async function javascriptBuilder(bumpType: SemverBumpType, config: ResolvedGenerateNextVersionConfig) {
+export async function javascriptBuilder(bumpType: SemverBumpType, commits: GitCommit[], config: ResolvedGenerateNextVersionConfig) {
   const version = inc(bumpType, config)
-
-  const rawCommits = await getGitDiff(config.from, config.to)
-
-  const commits = parseCommits(rawCommits, config)
 
   if (config.to !== config.base)
     return `${version}-${useSlugify(config.to)}.${commits.length}.${commits[0].shortHash}`
