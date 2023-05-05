@@ -12,7 +12,7 @@ export async function javascriptBuilder(bumpType: SemverBumpType, config: Resolv
   if (config.to !== config.base)
     return `${version}-${useSlugify(config.to)}.${commits.length}.${commits[0].shortHash}`
 
-  if (config.edge)
+  if (config.edge && commits.length > 0)
     return `${version}-edge.${commits.length}.${commits[0].shortHash}`
 
   return version as string
