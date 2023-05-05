@@ -1,8 +1,7 @@
 import cac from 'cac'
 import { consola } from 'consola'
 import { version } from '../package.json'
-import { getBumpType } from './semver'
-import { generateVersion, languages, resolveConfig } from './index'
+import { buildVersion, getBumpType, languages, resolveConfig } from './index'
 
 const cli = cac('generate-next-version')
 
@@ -18,7 +17,7 @@ cli.command('')
       const config = await resolveConfig(args)
 
       const bumpType = await getBumpType(config)
-      const version = await generateVersion(bumpType, config)
+      const version = await buildVersion(bumpType, config)
 
       consola.log(version)
     }

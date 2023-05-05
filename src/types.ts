@@ -13,4 +13,4 @@ export interface GenerateNextVersionConfig extends Partial<ChangelogenOptions> {
 
 export type ResolvedGenerateNextVersionConfig = Required<GenerateNextVersionConfig>
 
-export type Generator = (bumpType: SemverBumpType, commits: GitCommit[], config: ResolvedGenerateNextVersionConfig) => Promise<string>
+export type Builder = (bumpType: SemverBumpType, commits: GitCommit[], config: ResolvedGenerateNextVersionConfig) => Promise<string>

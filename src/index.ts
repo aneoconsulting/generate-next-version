@@ -1,4 +1,5 @@
 export * from './types'
 export * from './config'
-export * from './generate'
+export * from './version'
 export * from './languages'
+export * from './builder'
