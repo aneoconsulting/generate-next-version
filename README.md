@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 16.x
 
-      - run: echo "VERSION=$(npx @aneoconsultingfr/generate-next-version)" >> $GITHUB_ENV
+      - run: echo "VERSION=$(npx @aneoconsultingfr/generate-next-version@latest)" >> $GITHUB_ENV
 ```
 
 It will be trigged whenever you push a tag to GitHub that starts with `v`.
@@ -58,7 +58,7 @@ npx @aneoconsultingfr/generate-next-version@latest [...args]
 ## Preview Locally
 
 ```bash
-npx @aneoconsultingfr/generate-next-version
+npx @aneoconsultingfr/generate-next-version@latest
 ```
 
 ## License
