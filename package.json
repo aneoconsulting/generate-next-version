@@ -1,0 +1,70 @@
+{
+  "name": "@aneoconsultingfr/generate-next-version",
+  "version": "0.0.1",
+  "description": "Generate a new version using latest commit messages and following the semantic versioning",
+  "type": "module",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "start": "nr dev && node cli.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aneoconsulting/generate-next-version.git"
+  },
+  "keywords": [
+    "github",
+    "release",
+    "changelog",
+    "notes"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": "./cli.mjs",
+  "files": [
+    "dist",
+    "*.mjs"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Estéban Soubiran <esoubiran@aneo.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aneoconsulting/generate-next-version/issues"
+  },
+  "homepage": "https://github.com/aneoconsulting/generate-next-version#readme",
+  "dependencies": {
+    "c12": "^1.4.1",
+    "cac": "^6.7.14",
+    "changelogen": "^0.5.3",
+    "changelogithub": "^0.12.9",
+    "consola": "^3.1.0",
+    "defu": "^6.1.2",
+    "ofetch": "^1.0.1",
+    "semver": "^7.5.0",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.5",
+    "@types/node": "^18.16.4",
+    "@types/semver": "^7.3.13",
+    "eslint": "^8.39.0",
+    "jiti": "^1.18.2",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1"
+  },
+  "packageManager": "pnpm@8.4.0"
+}
