@@ -7,9 +7,7 @@ export async function javascriptBuilder(bumpType: SemverBumpType, config: Resolv
 
   const rawCommits = await getGitDiff(config.from, config.to)
 
-  console.log(rawCommits)
   const commits = parseCommits(rawCommits, config)
-  console.log(commits)
 
   if (config.edge)
     return `${version}-edge.${commits.length}.${commits[0].shortHash}`

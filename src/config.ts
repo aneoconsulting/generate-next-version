@@ -9,6 +9,16 @@ export function defineConfig(config: GenerateNextVersionConfig): GenerateNextVer
 }
 
 const defaultConfig: GenerateNextVersionConfig = {
+  scopeMap: {},
+  types: {
+    feat: { title: '🚀 Enhancements', semver: 'minor' },
+    perf: { title: '🔥 Performance', semver: 'patch' },
+    fix: { title: '🩹 Fixes', semver: 'patch' },
+    refactor: { title: '💅 Refactors', semver: 'patch' },
+    docs: { title: '📖 Documentation', semver: 'patch' },
+    build: { title: '📦 Build', semver: 'patch' },
+    types: { title: '🌊 Types', semver: 'patch' },
+  },
   language: 'javascript',
   edge: false,
   from: '',
