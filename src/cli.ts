@@ -19,7 +19,8 @@ cli.command('')
       const bumpType = await getBumpType(config)
       const version = await buildVersion(bumpType, config)
 
-      consola.log(version)
+      // Write version to stdout
+      process.stdout.write(version)
     }
     catch (error) {
       consola.error(error)
