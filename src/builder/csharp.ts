@@ -1,8 +1,8 @@
-import type { GitCommit, SemverBumpType } from 'changelogen'
+import type { RawGitCommit, SemverBumpType } from 'changelogen'
 import type { Builder, ResolvedGenerateNextVersionConfig } from '../types'
 import { inc, useSlugify } from './_utils'
 
-export const csharpBuilder: Builder = async function (bumpType: SemverBumpType, commits: GitCommit[], config: ResolvedGenerateNextVersionConfig) {
+export const csharpBuilder: Builder = async function (bumpType: SemverBumpType, commits: RawGitCommit[], config: ResolvedGenerateNextVersionConfig) {
   const version = inc(bumpType, config)
 
   if (config.to !== config.base)

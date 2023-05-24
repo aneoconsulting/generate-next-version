@@ -1,4 +1,4 @@
-import type { ChangelogConfig, GitCommit, SemverBumpType } from 'changelogen'
+import type { ChangelogConfig, RawGitCommit, SemverBumpType } from 'changelogen'
 import type { languages } from './languages'
 
 export type ChangelogenOptions = ChangelogConfig
@@ -13,4 +13,4 @@ export interface GenerateNextVersionConfig extends Partial<ChangelogenOptions> {
 
 export type ResolvedGenerateNextVersionConfig = Required<GenerateNextVersionConfig>
 
-export type Builder = (bumpType: SemverBumpType, commits: GitCommit[], config: ResolvedGenerateNextVersionConfig) => Promise<string>
+export type Builder = (bumpType: SemverBumpType, commits: RawGitCommit[], config: ResolvedGenerateNextVersionConfig) => Promise<string>

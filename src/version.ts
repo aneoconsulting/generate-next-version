@@ -7,9 +7,8 @@ export async function buildVersion(semver: SemverBumpType, config: ResolvedGener
   const builder = builders[config.language]
 
   const rawCommits = await getGitDiff(config.from, config.to)
-  const commits = parseCommits(rawCommits, config)
 
-  const version = await builder(semver, commits, config)
+  const version = await builder(semver, rawCommits, config)
 
   return version
 }
