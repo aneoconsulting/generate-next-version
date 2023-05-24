@@ -1,6 +1,6 @@
 {
   "name": "@aneoconsultingfr/generate-next-version",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Generate a new version using latest commit messages and following the semantic versioning",
   "type": "module",
   "scripts": {
