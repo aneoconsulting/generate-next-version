@@ -16,6 +16,13 @@
       ]
     },
     {
+      "groupName": "node",
+      "groupSlug": "node",
+      "matchDatasources": [
+        "node-version"
+      ]
+    },
+    {
       "groupName": "github actions",
       "groupSlug": "github-actions",
       "matchDatasources": [
