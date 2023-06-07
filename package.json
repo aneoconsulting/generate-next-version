@@ -37,7 +37,7 @@
     "*.mjs"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=v18.16.0"
   },
   "author": "Estéban Soubiran <esoubiran@aneo.fr>",
   "license": "MIT",
