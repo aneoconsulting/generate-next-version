@@ -24,7 +24,7 @@ jobs:
         with:
           cache: pnpm
           registry-url: https://registry.npmjs.org/
-          node-version: 18.x
+          node-version: 22.21.0
 
       - name: Install
         run: nci
